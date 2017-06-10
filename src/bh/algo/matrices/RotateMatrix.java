@@ -31,6 +31,8 @@ public class RotateMatrix {
         rotateAntiClockWise(matrix,size);
         System.out.println("Rotate Matrix 180 degree Clock wise");
         rotate180ClockWise(matrix,size);
+        System.out.println("Rotate Matrix 180 degree Anti Clock wise");
+        rotate180AntiClockWise(matrix,size);
     }
 
     public static void rotateClockWise(int matrix[][],int n) {
@@ -89,17 +91,41 @@ public class RotateMatrix {
             for (int r=i;r<n-i-1;r++) {
                 tmp = matrix[i][r];
 
-               matrix[i][r] =  matrix[n-i-1][n-r-1];
+                matrix[i][r] =  matrix[n-i-1][n-r-1];
 
-               matrix[n-i-1][n-r-1] = tmp;
+                matrix[n-i-1][n-r-1] = tmp;
 
                 tmp = matrix[r][n-i-1];
 
-               matrix[r][n-i-1] =  matrix[n-r-1][i];
+                matrix[r][n-i-1] =  matrix[n-r-1][i];
                 matrix[n-r-1][i] = tmp;
             }
         }
 
+        for (int i=0;i<n;i++) {
+            for (int j=0;j<n;j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void rotate180AntiClockWise(int matrix[][], int n) {
+
+        int tmp = 0;
+        for (int i=0;i<n/2;i++) {
+            for (int r=i;r<n-i-1;r++) {
+                tmp = matrix[i][r];
+
+                matrix[i][r] = matrix[n-i-1][n-r-1];
+                matrix[n-i-1][n-r-1] = tmp;
+
+                tmp = matrix[r][n-i-1];
+
+                matrix[r][n-i-1] = matrix[n-r-1][i];
+                matrix[n-r-1][i] = tmp;
+            }
+        }
         for (int i=0;i<n;i++) {
             for (int j=0;j<n;j++) {
                 System.out.print(matrix[i][j] + " ");
