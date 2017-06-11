@@ -4,3 +4,4 @@ Problems Solved:
     90 degree Anti clock wise
     180 degree clock wise
     180 degree Anti Clock wise
+2. Max Rectangle Area in a histogram
