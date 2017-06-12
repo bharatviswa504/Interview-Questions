@@ -5,16 +5,16 @@ package bh.algo.matrices;
  */
 public class ReArrange {
     public static void main(String args[]) throws Exception {
-        int size=4;
+        int size = 4;
         int[] arr = new int[]{-3, 3, -2, 2};
 
         System.out.println("Rearrange of arr[]");
-        reArrange(arr,size);
+        reArrange(arr, size);
 
         int[] arr1 = new int[]{2, -4, 7, -3, 4};
 
         System.out.println("Rearrange of arr[]");
-        reArrange(arr1,5);
+        reArrange(arr1, 5);
 
 
         /*int testCases = 0;
@@ -36,21 +36,20 @@ public class ReArrange {
 
         int p[] = new int[size];
         int n[] = new int[size];
-        int j=0;
-        int k=0;
-        for(int i=0;i<size;i++) {
-            if(arr[i] < 0) {
-                n[j++]=arr[i];
-            }
-            else {
-                p[k++]=arr[i];
+        int j = 0;
+        int k = 0;
+        for (int i = 0; i < size; i++) {
+            if (arr[i] < 0) {
+                n[j++] = arr[i];
+            } else {
+                p[k++] = arr[i];
             }
         }
 
-        for(int i=0;i<j;i++) {
+        for (int i = 0; i < j; i++) {
             System.out.print(n[i] + " ");
         }
-        for(int i=0;i<k;i++) {
+        for (int i = 0; i < k; i++) {
             System.out.print(p[i] + " ");
         }
         System.out.println();

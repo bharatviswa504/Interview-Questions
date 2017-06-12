@@ -5,7 +5,7 @@ package bh.algo.matrices;
  */
 
 //Program to Count Negative Integers in Row/Column-Wise Sorted Matrix
-    //Considered matrix is n*n
+//Considered matrix is n*n
 
 public class CountNegative {
 
@@ -20,21 +20,19 @@ public class CountNegative {
     }
 
     public static int countNegative(final int matrix[][], final int size) {
-        int negativeCount=0;
+        int negativeCount = 0;
 
         int row = 0;
         int col = size - 1;
 
-        while ( col>=0 && row <size) {
-            if(matrix[row][col] >=0){
+        while (col >= 0 && row < size) {
+            if (matrix[row][col] >= 0) {
                 col--;
-            }
-            else {
+            } else {
                 negativeCount += col + 1;
                 row++;
             }
         }
-
 
 
         return negativeCount;
